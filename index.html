@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Traditional Passion Boutique</title>
+<style>
+body{
+font-family: Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+header{
+background:maroon;
+color:white;
+padding:15px;
+text-align:center;
+}
+
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+margin:20px;
+}
+
+.card{
+background:white;
+width:200px;
+margin:15px;
+padding:10px;
+text-align:center;
+box-shadow:0 0 10px gray;
+border-radius:8px;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+button{
+background:maroon;
+color:white;
+border:none;
+padding:7px;
+cursor:pointer;
+margin-top:5px;
+}
+
+#cart{
+background:white;
+margin:20px;
+padding:15px;
+box-shadow:0 0 10px gray;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>TRADITIONAL PASSION BOUTIQUE</h1>
+<p class="tagline">FIND THE BEST OPETIONS FOR YOU ✨</p>
+<p class="tagline">New Season – New Collection ✨</p>
+<p>Kolhapur | Contact: 9876543210</p>
+</header>
+
+<h2 align="center">Our Collection</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="C:\Users\HP\Desktop\surekha.1\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg">
+<h3>Silk Saree</h3>
+<p>₹2500</p>
+<h2>VARIETIES</h2>
+
+<select id="sareeSelect" onchange="changeSaree()">
+  <option value="">-- Select Saree --</option>
+  <option value="silk">party waere</option>
+  <option value="banarasi">Banarasi</option>
+  <option value="paithani">Paithani</option>
+  <option value="bridal">Bridal</option>
+</select>
+
+<br><br>
+
+<img id="sareeImage" src="" width="250">
+
+<h3 id="price"></h3>
+<script>
+function changeSaree() {
+
+  var saree = document.getElementById("sareeSelect").value;
+  var image = document.getElementById("sareeImage");
+  var price = document.getElementById("price");
+
+  if(saree == "party waere") {
+    img src="C:\Users\HP\Desktop\surekha.1\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg";
+    price.innerHTML = "Price: ₹1000";
+  }
+
+  if(saree == "banarasi") {
+    img src ="C:\Users\HP\Desktop\rachana\saree.png";
+    price.innerHTML = "Price: ₹1500";
+  }
+
+  if(saree == "paithani") {
+    img src = "paithani.jpg";
+    price.innerHTML = "Price: ₹2500";
+  }
+
+  if(saree == "bridal") {
+    img src="C:\Users\HP\Desktop\rachana\saree.png";
+    price.innerHTML = "Price: ₹5000";
+  }
+
+  if(saree == "cotton") {
+    image.src = "C:\Users\HP\Desktop\surekha.1\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg";
+    price.innerHTML = "";
+  }
+}
+</script>
+
+
+
+<button onclick="addToCart('Silk Saree',2500)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="C:\Users\HP\Desktop\rachana\kurti.png">
+<h3> Kurti</h3>
+<p>₹1200</p>
+<h3>VARIETIES</h3>
+
+<select id="kurtiSelect" onchange="changeKurti()">
+  <option value="">-- Select Kurti --</option>
+
+  <option value="cottonKurti">Cotton Kurti</option>
+  <option value="silkKurti">Silk Kurti</option>
+  <option value="anarkaliKurti">Anarkali Kurti</option>
+  <option value="partyKurti">Party Wear Kurti</option>
+  <option value="printedKurti">Printed Kurti</option>
+  <option value="designerKurti">Designer Kurti</option>
+  <option value="longKurti">Long Kurti</option>
+  <option value="shortKurti">Short Kurti</option>
+</select>
+<script>
+function changeKurti() {
+
+  var kurti = document.getElementById("kurtiSelect").value;
+  var image = document.getElementById("kurtiImage");
+  var price = document.getElementById("kurtiPrice");
+
+  if(kurti == "cottonKurti") {
+    img src= "C:\Users\HP\Desktop\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg";
+    price.innerHTML = "Price: ₹700";
+  }
+
+  if(kurti == "silkKurti") {
+    image.src = "C:\Users\HP\Desktop\surekha.1\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg";
+    price.innerHTML = "Price: ₹1500";
+  }
+
+  if(kurti == "anarkaliKurti") {
+    image.src = "C:\Users\HP\Desktop\rachana\salwar - Copy.jpg";
+    price.innerHTML = "Price: ₹1800";
+  }
+
+  if(kurti == "partyKurti") {
+    image.src = "C:\Users\HP\Desktop\rachana\saree.png";
+    price.innerHTML = "Price: ₹1200";
+  }
+
+  if(kurti == "printedKurti") {
+    image.src = "C:\Users\HP\Desktop\rachana\salwar.jpg";
+    price.innerHTML = "Price: ₹900";
+  }
+
+  if(kurti == "designerKurti") {
+    image.src = "C:\Users\HP\Desktop\rachana\saree.png";
+    price.innerHTML = "Price: ₹2000";
+  }
+
+  if(kurti == "longKurti") {
+    image.src = "longKurti.jpg";
+    price.innerHTML = "Price: ₹1100";
+  }
+
+  if(kurti == "shortKurti") {
+    image.src = "shortKurti.jpg";
+    price.innerHTML = "Price: ₹800";
+  }
+
+  if(kurti == "") {
+    image.src = "";
+    price.innerHTML = "";
+  }
+}
+</script>
+
+<br><br>
+
+<img id="kurtiImage" src="" width="250">
+
+<h3 id="kurtiPrice"></h3>
+<select>
+  <option>Small</option>
+  <option>Medium</option>
+  <option>Large</option>
+</select>
+<button onclick="addToCart('Designer Kurti',1200)">Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="C:\Users\HP\Desktop\rachana\salwar.jpg">
+<h3>Salwar suit</h3>
+<p>₹2000</p>
+<h3>VARIETIES</h3>
+
+<select id="suitSelect" onchange="changeSuit()">
+  <option value="">-- Select Suit --</option>
+  <option value="cottonSuit">Cotton Suit</option>
+  <option value="silkSuit">Silk Suit</option>
+  <option value="anarkali">Anarkali Suit</option>
+  <option value="partySuit">Party Wear Suit</option>
+</select>
+
+<br><br>
+
+<img id="suitImage" src="" width="250">
+
+<h3 id="suitPrice"></h3>
+<script>
+function changeSuit() {
+
+  var suit = document.getElementById("suitSelect").value;
+  var image = document.getElementById("suitImage");
+  var price = document.getElementById("suitPrice");
+
+  if(suit == "cottonSuit") {
+    image.src = "cottonSuit.jpg";
+    price.innerHTML = "Price: ₹900";
+  }
+
+  if(suit == "silkSuit") {
+    image.src = "silkSuit.jpg";
+    price.innerHTML = "Price: ₹1800";
+  }
+
+  if(suit == "anarkali") {
+    image.src = "C:\Users\HP\Desktop\rachana@25\New folder\pink_glass_tissue_saree_with_sequins_and_moti_embroidered_border-sg284516_7.jpg";
+    price.innerHTML = "Price: ₹2500";
+  }
+
+  if(suit == "partySuit") {
+    image.src = "partySuit.jpg";
+    price.innerHTML = "Price: ₹2000";
+  }
+
+  if(suit == "") {
+    image.src = "";
+    price.innerHTML = "";
+  }
+}
+</script>
+<select>
+  <option>Small</option>
+  <option>Medium</option>
+  <option>Large</option>
+</select>
+<button onclick="addToCart('Party Dress',2000)">Add to Cart</button>
+</div>
+
+</div>
+
+<div id="cart">
+<h2>Shopping Cart</h2>
+<ul id="cartList"></ul>
+<script>
+function addToCart(){
+    var product = document.getElementById("product");
+    var productText = product.options[product.selectedIndex].text;
+
+    var li = document.createElement("li");
+    li.innerHTML = productText + 
+    " <button onclick='removeItem(this)'>Delete</button>";
+
+    document.getElementById("cartList").appendChild(li);
+}
+
+function removeItem(button){
+    button.parentElement.remove();
+}
+</script>
+<ul id="cartItems"></ul>
+<h3>Total: ₹<span id="total">0</span></h3>
+</div>
+
+<script>
+let total = 0;
+
+function addToCart(name, price){
+
+let li = document.createElement("li");
+li.innerText = name + " - ₹" + price;
+document.getElementById("cartItems").appendChild(li);
+
+total += price;
+document.getElementById("total").innerText = total;
+
+}
+</script>
+<h2 align="center">Customer Details</h2>
+
+<div style="text-align:center; margin:20px;">
+<input type="text" id="custName" placeholder="Enter Name"><br><br>
+<input type="text" id="custMobile" placeholder="Enter Mobile"><br><br>
+
+<h3>Select Payment Method</h3>
+<input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery
+<input type="radio" name="payment" value="Online Payment"> Online Payment
+<input type="radio" name="payment" value="cad payment"> card Payment
+<h2>Payment Method</h2>
+
+<div style="border:1px solid #ccc; padding:20px; width:300px; text-align:center;">
+    <h3>Scan & Pay</h3>
+    
+    <!-- Scanner Image -->
+    <img src="images/scanner.png" alt="Scan to Pay" width="200px">
+    
+    <p>Scan this QR Code using any UPI App</p>
+    <p>Google Pay | PhonePe | Paytm</p>
+</div>
+
+<br><br>
+
+<button onclick="makePayment()">Proceed to Payment</button>
+</div>
+
+<div id="billSection" style="display:none; background:white; margin:20px; padding:15px; box-shadow:0 0 10px gray;">
+<h2>🧾 Final Bill</h2>
+</div><a href="mailto:yourshopemail@example.com">traditionalboutique@gmail.com</a>
+<p>
+<b>Location:</b>
+<a href="https://maps.app.goo.gl/NHr9V42uU25VeH5n6" target="_blank">
+View on Google Maps
+</a>
+</p>
+<button onclick="document.getElementById('bill').style.display='block'">
+Complete Payment
+</button>
+<div id="bill" style="display:none; border:1px solid black; padding:10px; margin-top:10px;">
+  <h3>Traditional Passion Boutique</h3>
+  <p>Payment Successful ✅</p>
+  <p>Thank You For Shopping With Us 💛</p>
+  <p>VISIT AGAIN </p>
+</div>
+</body>
+</html>
